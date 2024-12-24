@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save for Later Feature</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to My Cooksite</h1>
+    <nav>
+        <ul>
+            <!-- Navigation Links -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Image Gallery Section -->
+<section>
+    <div class="image-container">
+        <h2>Gallery of My Work</h2>
+        <img src="https://media.istockphoto.com/id/2027572171/de/foto/nahaufnahme-mit-einer-hand-wird-der-braten-vom-backblech-auf-einen-teller-gelegt-der-von-zwei.jpg?s=1024x1024&w=is&k=20&c=mQexfaDcMXviPkMkt8Z06SwbObpuoJTFdnm-brP2dsA="
+             alt="Food Image 1">
+        <img src="https://media.istockphoto.com/id/1369335084/de/foto/sonntags-topfbraten.jpg?s=1024x1024&w=is&k=20&c=iNLqaY1u90VczTAZ38hsR1FTVqxXzzlw91j4WTCrib8="
+             alt="Food Image 2">
+        <img src="https://media.istockphoto.com/id/1266800901/de/foto/frau-bereitet-shakshuka-mit-pochierten-eiern-vor.jpg?s=1024x1024&w=is&k=20&c=HY4_cgVpyc-beB-wIpOmryMBlIjeLCAHIWVend-xq1I="
+             alt="Food Image 3">
+        <img src="https://media.istockphoto.com/id/921957348/de/foto/kochen-von-gem%C3%BCse-schritt-sieben-w%C3%BCrzen.jpg?s=1024x1024&w=is&k=20&c=N0oP1j_hHDx5R0NWKB-7aKDvx-wxzTiMpGFXUPnxdFM="
+             alt="Food Image 4">
+        <img src="https://media.istockphoto.com/id/588595864/tr/foto%C4%9Fraf/steaming-mixed-vegetables-in-the-wok-asian-style-cooking.jpg?s=1024x1024&w=is&k=20&c=tFCjfpNC2qHtHmfqFbhhMBx5KFA8OH7qP9DU7Rr5a5g="
+             alt="Food Image 5">
+    </div>
+</section>
+
+<!-- External Links Section -->
+<section>
+    <h2>Useful Links</h2>
+    <ul>
+        <!-- External Links -->
+        <li><a href="https://www.example.com" target="_blank">Visit Example Website</a></li>
+        <li><a href="mailto:info@mywebsite.com">Email Me</a></li>
+    </ul>
+</section>
+
+<!-- Testimonial Section -->
+<section>
+    <h2>Satisfied User</h2>
+    <blockquote>
+        "This website has been a game-changer in helping me discover new, delicious recipes. Highly recommend it!" - A
+        Happy User
+    </blockquote>
+</section>
+
+<!-- Table Section -->
+<section>
+    <h2>My Recipe Categories</h2>
+    <!-- A simple table displaying recipe categories -->
+    <table>
+        <thead>
+        <tr>
+            <th>Category</th>
+            <th>Examples</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Starters</td>
+            <td>Soup, Salad</td>
+        </tr>
+        <tr>
+            <td>Main Courses</td>
+            <td>Steak, Pasta</td>
+        </tr>
+        <tr>
+            <td>Desserts</td>
+            <td>Cake, Ice Cream</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Contact Form Section -->
+<section>
+
+        <label>What type of recipes would you like to receive?</label><br>
+        <input type="radio" id="starters" name="recipe" value="Starters">
+        <label for="starters">Starters</label><br>
+        <input type="radio" id="mains" name="recipe" value="Main Courses">
+        <label for="mains">Main Courses</label><br>
+        <input type="radio" id="desserts" name="recipe" value="Desserts">
+        <label for="desserts">Desserts</label><br><br>
+
+        <input type="submit" value="Subscribe">
+    </form>
+</section>
+
+<!-- Content to save -->
+<div class="content-item" id="item1">
+    <h1>Article 1</h1>
+    <p>This is an article about something interesting.</p>
+    <button onclick="saveForLater('item1', 'Article 1')">Save for Later</button>
+</div>
+
+
+<form>
+    <textarea>Tell us what you think!</textarea>
+    <button onclick="addComment()">Comment</button>
+    <button onclick="likeItem(1)">Like</button>
+</form>
+
+
+<div class="content-item" id="item2">
+    <h1>Recipe 1</h1>
+    <p>This is a recipe for a delicious dish.</p>
+    <button onclick="saveForLater('item2', 'Recipe 1')">Save for Later</button>
+</div>
+
+
+<form>
+    <textarea id="comment">Tell us what you think!</textarea>
+    <button onclick="addComment()">Comment</button>
+    <button onclick="likeItem(2)">Like</button>
+</form>
+
+
+<!-- Link to view saved items -->
+<a href="items.html" id="view-saved-link">View Saved Items</a>
+
+
+<!-- Contact Form -->
+<h2>Contact Us</h2>
+<form id="contact-form">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message"></textarea><br><br>
+    <button type="submit">Send</button>
+</form>
+<script src="script.js"></script>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 My Website</p>
+</footer>
+</body>
+</html>
